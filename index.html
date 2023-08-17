@@ -3,9 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Página de Coaching de League of Legends</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut cum dignissimos assumenda amet. Dicta qui, maiores quod consequatur mollitia repellat voluptatem itaque, praesentium tempora commodi natus perferendis beatae illo nulla?</p>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Coaching LoL</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#informacion-inicial">Información Inicial</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#nuestros-coachs">Nuestros Coachs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#nuestros-precios">Nuestros Precios</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Información Inicial -->
+    <section id="informacion-inicial" class="py-5">
+        <div class="container">
+            <h2>Información Inicial</h2>
+            <p>Somos una página especializada en coaching de League of Legends. Nuestro objetivo es ayudarte a mejorar tus habilidades en el juego y alcanzar tus metas competitivas. Ofrecemos entrenamiento personalizado y estrategias avanzadas para jugadores de todos los niveles. Ya sea que estés buscando subir de rango, mejorar tu mecánica o aprender tácticas avanzadas, nuestros coachs expertos están aquí para ayudarte a tener éxito en el mundo de LoL.</p>
+        </div>
+    </section>
+
+    <!-- Nuestros Coachs -->
+    <section id="nuestros-coachs" class="bg-light py-5">
+        <div class="container">
+            <h2>Nuestros Coachs</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="coach-box">
+                        <img src="coach1.jpg" alt="Coach 1" class="img-fluid rounded-circle">
+                        <h4>Coach 1</h4>
+                        <p>Experto en estrategias de jungla. Ha alcanzado el rango Challenger múltiples veces. Apasionado por ayudar a los jugadores a mejorar su macrojuego.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="coach-box">
+                        <h4>Coach 2</h4>
+                        <p>Jugador profesional retirado. Conocido por su habilidad en la calle superior. Se enfoca en la mejora de la mecánica y el posicionamiento.</p>
+                        <img src="coach2.jpg" alt="Coach 2" class="img-fluid rounded-circle">
+                    </div>
+                </div>
+                <!-- Repetir el mismo patrón para otros coachs -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="coach-box">
+                            <img src="coach3.jpg" alt="Coach 1" class="img-fluid rounded-circle">
+                            <h4>Coach 3</h4>
+                            <p>Experto en estrategias de jungla. Ha alcanzado el rango Challenger múltiples veces. Apasionado por ayudar a los jugadores a mejorar su macrojuego.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="coach-box">
+                            <h4>Coach 4</h4>
+                            <p>Jugador profesional retirado. Conocido por su habilidad en la calle superior. Se enfoca en la mejora de la mecánica y el posicionamiento.</p>
+                            <img src="coach3.jpg" alt="Coach 2" class="img-fluid rounded-circle">
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nuestros Precios -->
+    <section id="nuestros-precios" class="py-5">
+        <div class="container">
+            <h2>Nuestros Precios</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="precio-box text-center">
+                        <h4>Coaching Básico</h4>
+                        <p>Mejora tus fundamentos de juego</p>
+                        <h3>$5</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="precio-box text-center">
+                        <h4>Coaching Avanzado</h4>
+                        <p>Entrenamiento intensivo para subir de rango</p>
+                        <h3>$20</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="precio-box text-center">
+                        <h4>Coaching Profesional</h4>
+                        <p>Asesoramiento personalizado por jugadores de élite</p>
+                        <h3>$50</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>Derechos de autor &copy; 2023 Coaching LoL. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Cierre del cuerpo y el HTML -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
