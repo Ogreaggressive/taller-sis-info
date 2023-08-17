@@ -57,14 +57,14 @@
                 <div class="col-md-6 mb-4">
                     <div class="coach-box text-center">
                         <img src="chris.PNG" alt="Coach 1" class="img-fluid rounded-circle">
-                        <h4>Coach 1</h4>
+                        <h4>L9 djiwan</h4>
                         <p>Experto en estrategias de jungla. Ha alcanzado el rango Challenger múltiples veces. Apasionado por ayudar a los jugadores a mejorar su macrojuego.</p>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="coach-box text-center">
                         <img src="gabor.jpg" alt="Coach 2" class="img-fluid rounded-circle">
-                        <h4>Coach 2</h4>
+                        <h4>Viejo jenkins</h4>
                         <p>Jugador profesional retirado. Conocido por su habilidad en la calle del medio. Se enfoca en la mejora de la mecánica y el posicionamiento.</p>
                     </div>
                 </div>
@@ -73,14 +73,14 @@
                 <div class="col-md-6 mb-4">
                     <div class="coach-box text-center">
                         <img src="lipi.PNG" alt="Coach 3" class="img-fluid rounded-circle" style="width: 400px; height: 400px;">
-                    <h4>Coach 3</h4>
+                    <h4>daddy lipi</h4>
                         <p>Experto adc desde el 2018, conocido como el LipiBestia, uno de los adc mas prodigos de la region del sur, esta dispuesto a ofrecer su amplio conocimiento en el macrojuego para que puedas subir tan rapido como el.</p>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="coach-box text-center">
                         <img src="bagre.PNG" alt="Coach 4" class="img-fluid rounded-circle">
-                        <h4>Coach 4</h4>
+                        <h4>Bagriel</h4>
                         <p>Soporte de 200 de IQ, conocido por su madlife hook, juega desde la temporada 1 y fue contratado anteriormente por equipos como T2 o G3.</p>
                     </div>
                 </div>
@@ -92,31 +92,66 @@
     <section id="nuestros-precios" class="py-5">
         <div class="container">
             <h2>Nuestros Precios</h2>
-            <div class="row">
-                <div class="col-md-4">
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-1 text-center">
+                    <a class="btn btn-link" id="prevPrice"><</a>
+                </div>
+                <div class="col-md-10 text-center">
                     <div class="precio-box text-center">
-                        <h4>Coaching Básico</h4>
-                        <p>Mejora tus fundamentos de juego</p>
-                        <h3>$5</h3>
+                        <h4 id="precioTitulo">Coaching Avanzado</h4>
+                        <p id="precioDescripcion">Entrenamiento intensivo para subir de rango</p>
+                        <h3 id="precioValor">$20</h3>
+                        <div id="botonCompra" class="mt-3">
+                            <button class="btn btn-primary btn-lg btn-block">Comprar</button>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="precio-box text-center">
-                        <h4>Coaching Avanzado</h4>
-                        <p>Entrenamiento intensivo para subir de rango</p>
-                        <h3>$20</h3>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="precio-box text-center">
-                        <h4>Coaching Profesional</h4>
-                        <p>Asesoramiento personalizado por jugadores de élite</p>
-                        <h3>$50</h3>
-                    </div>
+                <div class="col-md-1 text-center">
+                    <a class="btn btn-link" id="nextPrice">></a>
                 </div>
             </div>
         </div>
     </section>
+    <script>
+        var currentPrice = 1;
+        var maxPrices = 3;
+    
+        document.getElementById("prevPrice").addEventListener("click", function() {
+            currentPrice = (currentPrice - 1) < 1 ? maxPrices : (currentPrice - 1);
+            showPrice(currentPrice);
+        });
+    
+        document.getElementById("nextPrice").addEventListener("click", function() {
+            currentPrice = (currentPrice + 1) > maxPrices ? 1 : (currentPrice + 1);
+            showPrice(currentPrice);
+        });
+    
+        function showPrice(priceNumber) {
+            var coachingTitles = ["Coaching Básico", "Coaching Avanzado", "Coaching Profesional"];
+            var coachingDescriptions = [
+                "Mejora tus fundamentos de juego",
+                "Entrenamiento intensivo para subir de rango",
+                "Asesoramiento personalizado por jugadores de élite"
+            ];
+            var coachingPrices = ["$5", "$20", "$50"];
+    
+            var title = coachingTitles[priceNumber - 1];
+            var description = coachingDescriptions[priceNumber - 1];
+            var price = coachingPrices[priceNumber - 1];
+    
+            document.querySelector("#precioTitulo").textContent = title;
+            document.querySelector("#precioDescripcion").textContent = description;
+            document.querySelector("#precioValor").textContent = price;
+    
+            // Cambiar el texto del botón y el enlace (si es necesario)
+            var botonCompra = document.querySelector("#botonCompra button");
+            botonCompra.textContent = "Comprar " + title;
+            botonCompra.setAttribute("href", "#");  // Reemplazar "#" con el enlace de compra real
+        }
+    
+        // Mostrar el primer precio al cargar la página
+        showPrice(currentPrice);
+    </script>
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
